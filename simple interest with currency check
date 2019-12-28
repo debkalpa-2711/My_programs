@@ -1,0 +1,27 @@
+#simple interest
+import math
+
+# information
+principle = eval(input(" amount you want to invest >>> "))
+choice = input("'R' for Rupee , 'D' for dollar >>> ").lower()
+#currency check
+if choice == 'R' or choice == 'r':
+    rate = eval(input(" enter the rate at which you want to invest >>> "))
+    time = eval(input(" enter the number of months you want to invest the money >>> "))
+# calculate the simple interest
+    SI = (principle * time * rate) / 100
+    print(f"the simple interest of your amount Rs {principle}  in {time} months is >>> Rs {SI-principle} ")
+    print(f"the amount you get after {time} months is >>> Rs {SI}")
+
+elif choice == 'D' or choice == 'd':
+    rate = eval(input(" enter the rate at which you want to invest >>> "))
+    time = eval(input(" enter the number of months you want to invest the money >>> "))
+    principle = principle * 70
+# calculate the simple interest
+    SI = (principle * time * rate) / 100
+    print(f"the simple interest of your amount {principle/70} dollars in {time} months is >>> {SI/70 - principle/70} dollars ")
+    print(f"the amount you get after {time} months is >>> {SI/70} dollars")
+
+else:
+    print("sorry ! i don't understand")
+
