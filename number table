@@ -1,0 +1,8 @@
+#number table
+number = int(input(" enter the number >>> "))
+multiplier = 1
+for multiplier in range(0, 11):
+    multiple = number * multiplier
+    print(f"{number} * {multiplier} = {multiple}")
+    multiplier += 1
+
