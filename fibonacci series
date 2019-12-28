@@ -1,20 +1,46 @@
-email = input("enter email ")
-if "@" in email:
-    #paste here
-    
-    password = input(" password ")
+# 1 . fibonacci series generator
+# 2 . fibonaki series index
 
-    if email == "admin@mywbut.com" and password == "1234" :
-        print("welcome")
-    elif email == "admin@mywbut.com" and password != "1234" :
-        print("your password is incorrect")
-        password = input("enter password again ")
-        if email == "admin@mywbut.com" and password == "1234" :
-            print("welcome back ")
-        else:
-            print("error")
-    else :
-        print("incorrect email/password")
+1. 
+#fibonacci series
+limit = int(input("no of terms in fibonacci series >>>  "))
 
-else :
-    print("improper email")
+#values
+num1, num2 = 0, 1
+list1 = [num1, num2]
+#fibonacci series
+if limit == 0 :
+    print("the limit can not be 0")
+elif limit == 1 :
+    print(f" the series is >>> {num1}")
+else:
+
+    for i in range( 0, limit) :
+        callculate = num1 + num2
+        list1.append(callculate)
+        num1 = num2
+        num2 = callculate
+print(list1)
+
+
+2.
+#fibonacci series index
+limit = 10000
+index = int(input("enter the index of fibonacci series >>>  "))
+
+#values
+num1, num2 = 0, 1
+list1 = [num1, num2]
+#fibonacci series
+if limit == 0 :
+    print("the limit can not be 0")
+elif limit == 1 :
+    print(f" the series is >>> {num1}")
+else:
+
+    for i in range( 0, 10000):
+        callculate = num1 + num2
+        list1.append(callculate)
+        num1 = num2
+        num2 = callculate
+print(list1[index-1])
