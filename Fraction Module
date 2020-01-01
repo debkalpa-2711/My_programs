@@ -1,0 +1,36 @@
+class fraction:
+    num= 0
+    den= 0
+
+    def __init__(self, n , d):
+        self.num= n
+        self.den = d
+        
+    def __str__(self):
+        return str(self.num)+"/"+str(self.den)
+
+    def __add__(self,other):
+        numo = self.num * other.den + self.den *other.num
+        deno = self.den * other.den
+
+        return str(numo)+"/"+str(deno)
+
+    
+    def __sub__(self,other):
+        numo = self.num * other.den - self.den *other.num
+        deno = self.den * other.den
+
+        return str(numo)+"/"+str(deno)
+
+
+    def __mul__(self,other):
+            numo = self.num * other.num 
+            deno = self.den * other.den
+
+            return str(numo)+"/"+str(deno)
+
+    def __truediv__(self,other):
+        numo = self.num * other.den 
+        deno = self.den * other.num
+
+        return str(numo)+"/"+str(deno)
