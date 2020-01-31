@@ -1,0 +1,2 @@
+Input = input("enter the character for ascii value >> ")
+print(f"the ascii value of {Input} is {ord(Input)}")
