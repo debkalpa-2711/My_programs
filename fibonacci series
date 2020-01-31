@@ -1,5 +1,6 @@
 # 1 . fibonacci series generator
 # 2 . fibonaki series index
+# 3 . fibonacci number with index
 
 1. 
 #fibonacci series
@@ -44,3 +45,17 @@ else:
         num1 = num2
         num2 = callculate
 print(list1[index-1])
+
+3.
+#fibonacci number with index
+def Fibonacci(n):
+    if n < 0:
+        print("Incorrect input")
+    elif n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        return Fibonacci(n - 1) + Fibonacci(n - 2)
+
+print(Fibonacci(5)) #any number of your choice
