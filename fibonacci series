@@ -1,7 +1,7 @@
 # 1 . fibonacci series generator
 # 2 . fibonaki series index
 # 3 . fibonacci number with index
-
+# 4 . if a number is in fibonacci series
 1. 
 #fibonacci series
 limit = int(input("no of terms in fibonacci series >>>  "))
@@ -59,3 +59,27 @@ def Fibonacci(n):
         return Fibonacci(n - 1) + Fibonacci(n - 2)
 
 print(Fibonacci(5)) #any number of your choice
+
+4.
+#if a number is in fibonacci series
+#manual input
+number = int(input("enter the number to find >>  "))
+limit = 100
+
+#values
+num1, num2 = 0, 1
+list1 = [num1, num2]
+
+#fibonacci series
+for i in range( 0, limit) :
+    callculate = num1 + num2
+    list1.append(callculate)
+    num1 = num2
+    num2 = callculate
+
+# number finding
+if number in list1:
+    print(f"number {number} is in the list")
+else:
+    print(f"number {number} is not in list")
+
