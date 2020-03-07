@@ -1,0 +1,12 @@
+list1 = (1,2,3,4,5,6)
+list2 = []
+i = 0
+len = len(list1)
+while i <= len:
+    list2.append(i)
+    i+=1
+
+max1= max(list2)
+list2.remove(max1)
+max2= max(list2)
+print(max2)
